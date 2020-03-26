@@ -15,10 +15,15 @@ use App\Http\Controllers\PanController;
 |
 */
 
-Route::get('/pans', function (Request $request, PanController $panController) {
+/*Route::get('/pans', function (Request $request, PanController $panController) {
     return $panController->pansList();
 });
 
 Route::post('/pans', function (Request $request, PanController $panController) {
     return $panController->generateDough($request);
+});*/
+
+Route::group(['domain' => 'ilovepizza.test'], function () {
+    Route::get('/pans', 'PanController@pansList');
+    Route::post('/pans', 'PanController@generateDough');
 });

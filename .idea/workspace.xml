@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d07981b6-c5b4-4d86-8f85-359ae0346f22" name="Default Changelist" comment="Initial commit">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ilovepizza.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ilovepizza.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PanController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PanController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,30 +34,7 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MySQL - laravel@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MySQL - laravel@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MySQL - laravel@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="laravel: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MySQL - laravel@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="laravel: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="users: table" type="285a2a93:MysqlImplModel$Table" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -62,6 +47,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/config/apidoc.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
   </component>
   <component name="IgnoredFileRootStore">
     <option name="generatedRoots">
@@ -170,6 +158,17 @@
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
       <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
       <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/vendor/mnapoli/front-yaml" />
+      <path value="$PROJECT_DIR$/vendor/mnapoli/silly" />
+      <path value="$PROJECT_DIR$/vendor/mpociot/laravel-apidoc-generator" />
+      <path value="$PROJECT_DIR$/vendor/mpociot/documentarian" />
+      <path value="$PROJECT_DIR$/vendor/mpociot/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/erusev/parsedown" />
+      <path value="$PROJECT_DIR$/vendor/php-di/invoker" />
+      <path value="$PROJECT_DIR$/vendor/windwalker/structure" />
+      <path value="$PROJECT_DIR$/vendor/windwalker/renderer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-exporter" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ZBXpQtejeIrBb9yWSOPIjPnMjF" />
@@ -185,7 +184,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.16.1" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/docs/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -194,16 +193,20 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Modules/Auth/Database/Migrations" />
-      <recent name="$PROJECT_DIR$/public/css" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/docs/images" />
       <recent name="$PROJECT_DIR$/resources/views" />
       <recent name="$PROJECT_DIR$/resources/views/layouts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views" />
+      <recent name="$PROJECT_DIR$/resources/images" />
+      <recent name="$PROJECT_DIR$/resources/docs/images" />
+      <recent name="$PROJECT_DIR$/Modules/Auth/Database/Migrations" />
+      <recent name="$PROJECT_DIR$/public/css" />
     </key>
   </component>
   <component name="RunManager">
@@ -230,7 +233,9 @@
       <workItem from="1584887346101" duration="20000" />
       <workItem from="1584887402317" duration="3009000" />
       <workItem from="1584913238947" duration="5834000" />
-      <workItem from="1585086772987" duration="7153000" />
+      <workItem from="1585086772987" duration="10731000" />
+      <workItem from="1585219483544" duration="480000" />
+      <workItem from="1585220398631" duration="4311000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1584891041091</created>
@@ -260,18 +265,38 @@
       <option name="project" value="LOCAL" />
       <updated>1585152547673</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Initial commit">
+      <created>1585152649733</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1585152649733</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="added apidoc lib" />
-    <MESSAGE value="Initial commit" />
     <MESSAGE value="Mocking response" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mocking response" />
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="227" y="39" key="#CLI_Interpreters" timestamp="1584394236213">
@@ -306,16 +331,16 @@
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="288" y="32" key="#phpunit.xml/0.23.1280.709@0.23.1280.709" timestamp="1584394243977" />
-    <state x="97" y="23" key="CommitChangelistDialog2" timestamp="1585152629900">
+    <state x="97" y="23" key="CommitChangelistDialog2" timestamp="1585242342846">
       <screen x="0" y="23" width="1280" height="722" />
     </state>
     <state x="203" y="23" key="CommitChangelistDialog2/0.23.1280.709@0.23.1280.709" timestamp="1584894059202" />
-    <state x="97" y="23" key="CommitChangelistDialog2/0.23.1280.722@0.23.1280.722" timestamp="1585152629900" />
-    <state x="128" y="84" key="DiffContextDialog" timestamp="1585152446896">
+    <state x="97" y="23" key="CommitChangelistDialog2/0.23.1280.722@0.23.1280.722" timestamp="1585242342846" />
+    <state x="128" y="84" key="DiffContextDialog" timestamp="1585237872859">
       <screen x="0" y="23" width="1280" height="722" />
     </state>
     <state x="128" y="83" key="DiffContextDialog/0.23.1280.709@0.23.1280.709" timestamp="1584894037570" />
-    <state x="128" y="84" key="DiffContextDialog/0.23.1280.722@0.23.1280.722" timestamp="1585152446896" />
+    <state x="128" y="84" key="DiffContextDialog/0.23.1280.722@0.23.1280.722" timestamp="1585237872859" />
     <state width="619" height="175" key="GridCell.Tab.0.bottom" timestamp="1584568028783">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
@@ -336,22 +361,31 @@
       <screen x="0" y="23" width="1280" height="722" />
     </state>
     <state width="239" height="457" key="HiddenNamespacesPopup/0.23.1280.722@0.23.1280.722" timestamp="1584915648666" />
-    <state x="141" y="23" width="997" height="709" key="SettingsEditor" timestamp="1584888207547">
-      <screen x="0" y="23" width="1280" height="709" />
+    <state x="228" y="125" key="IDE.errors.dialog" timestamp="1585219674488">
+      <screen x="0" y="23" width="1280" height="722" />
+    </state>
+    <state x="228" y="125" key="IDE.errors.dialog/0.23.1280.722@0.23.1280.722" timestamp="1585219674488" />
+    <state x="141" y="23" width="997" height="709" key="SettingsEditor" timestamp="1585220448287">
+      <screen x="0" y="23" width="1280" height="722" />
     </state>
     <state x="141" y="23" width="997" height="709" key="SettingsEditor/0.23.1280.709@0.23.1280.709" timestamp="1584888207547" />
+    <state x="141" y="23" key="SettingsEditor/0.23.1280.722@0.23.1280.722" timestamp="1585220448287" />
     <state x="317" y="210" key="com.intellij.ide.util.TipDialog" timestamp="1584313652860">
       <screen x="0" y="23" width="1280" height="709" />
     </state>
     <state x="317" y="210" key="com.intellij.ide.util.TipDialog/0.23.1280.709@0.23.1280.709" timestamp="1584313652860" />
+    <state x="298" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585242094746">
+      <screen x="0" y="23" width="1280" height="722" />
+    </state>
+    <state x="298" y="23" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1280.722@0.23.1280.722" timestamp="1585242094746" />
     <state x="298" y="23" width="683" height="722" key="find.popup" timestamp="1584914147306">
       <screen x="0" y="23" width="1280" height="722" />
     </state>
     <state x="298" y="23" width="683" height="709" key="find.popup/0.23.1280.709@0.23.1280.709" timestamp="1584402555372" />
     <state x="298" y="23" width="683" height="722" key="find.popup/0.23.1280.722@0.23.1280.722" timestamp="1584914147306" />
-    <state x="305" y="69" width="670" height="676" key="search.everywhere.popup" timestamp="1585087076748">
+    <state x="305" y="69" width="670" height="676" key="search.everywhere.popup" timestamp="1585240070772">
       <screen x="0" y="23" width="1280" height="722" />
     </state>
-    <state x="305" y="69" width="670" height="676" key="search.everywhere.popup/0.23.1280.722@0.23.1280.722" timestamp="1585087076748" />
+    <state x="305" y="69" width="670" height="676" key="search.everywhere.popup/0.23.1280.722@0.23.1280.722" timestamp="1585240070772" />
   </component>
 </project>
