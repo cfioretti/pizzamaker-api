@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Services\PanService;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Http\JsonResponse;
@@ -9,28 +10,23 @@ use Illuminate\Validation\ValidationException;
 
 class PanController extends Controller
 {
+    /** @var PanService */
+    private $panService;
+
+    public function __construct(
+        PanService $panService
+    )
+    {
+        $this->panService = $panService;
+    }
+
     /**
      * @return JsonResponse
      */
     public function pansList(): JsonResponse
     {
-        $pans = [
-            (object)[
-                "id" => 1,
-                "shape" => "Round",
-                "measures" => ["Ray"]
-            ],
-            (object)[
-                "id" => 2,
-                "shape" => "Rectangular",
-                "measures" => ["Width", "Length"]
-            ],
-            (object)[
-                "id" => 3,
-                "shape" => "Square",
-                "measures" => ["Edge"]
-            ]
-        ];
+        $pans = $this->panService->getPans();
+
         return response()->json(
             $pans,
             Response::HTTP_OK
@@ -53,33 +49,10 @@ class PanController extends Controller
             'pans.*.measure' => 'required',
         ]);
 
-        $pans = (object)[
-            "total" => (object)[
-                "flour" => 500,
-                "water" => 300,
-                "oil" => 10,
-                "salt" => 10
-            ],
-            "pans" => [
-                (object)[
-                    "shape" => "Round",
-                    "measures" => (object)["Ray" => 4],
-                    "dough" => 140
-                ],
-                (object)[
-                    "shape" => "Rectangular",
-                    "measures" => (object)["Width" => 3, "Length" => 4],
-                    "dough" => 160
-                ],
-                (object)[
-                    "shape" => "Round",
-                    "measures" => (object)["Ray" => 7],
-                    "dough" => 200
-                ]
-            ]
-        ];
+        $totalDough = $this->panService->calculateDoughByPans($request);
+
         return response()->json(
-            $pans,
+            $totalDough,
             Response::HTTP_OK
         );
     }
