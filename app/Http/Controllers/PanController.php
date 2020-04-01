@@ -28,7 +28,7 @@ class PanController extends Controller
         $pans = $this->panService->getPans();
 
         return response()->json(
-            $pans,
+            $pans->toArray(),
             Response::HTTP_OK
         );
     }
@@ -48,11 +48,14 @@ class PanController extends Controller
             'pans.*.shape' => 'required|string',
             'pans.*.measure' => 'required',
         ]);
+        $pans = $request->get('pans');
 
-        $totalDough = $this->panService->calculateDoughByPans($request);
+        $pansList = $this->panService->generatePansListByPans($pans);
+        $totalDough = $this->panService->calculateDoughByPans($pansList);
 
-        return response()->json(
-            $totalDough,
+        return response()->json([
+            'total' => $totalDough->toArray(),
+            'pans' => $pansList->toArray()],
             Response::HTTP_OK
         );
     }

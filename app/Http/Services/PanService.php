@@ -2,66 +2,51 @@
 
 namespace App\Http\Services;
 
-use Illuminate\Http\Request;
+use App\Entities\Dough\Dough;
+use App\Entities\Pan\PanFactory;
+use App\Entities\Pan\PansList;
 
 class PanService
 {
-    /**
-     * @return array
-     */
-    public function getPans()
+    /** @var PanFactory */
+    private $panFactory;
+
+    /** @var DoughService */
+    private $doughService;
+
+    public function __construct(
+        PanFactory $panFactory,
+        DoughService $doughService
+    )
     {
-        $pans = [
-            (object)[
-                "id" => 1,
-                "shape" => "Round",
-                "measures" => ["Ray"]
-            ],
-            (object)[
-                "id" => 2,
-                "shape" => "Rectangular",
-                "measures" => ["Width", "Length"]
-            ],
-            (object)[
-                "id" => 3,
-                "shape" => "Square",
-                "measures" => ["Edge"]
-            ]
-        ];
-        return $pans;
+        $this->panFactory = $panFactory;
+        $this->doughService = $doughService;
     }
 
     /**
-     * @param Request $request
-     * @return object
+     * @return PansList
      */
-    public function calculateDoughByPans(Request $request)
+    public function getPans(): PansList
     {
-        $dough = (object)[
-            "total" => (object)[
-                "flour" => 500,
-                "water" => 300,
-                "oil" => 10,
-                "salt" => 10
-            ],
-            "pans" => [
-                (object)[
-                    "shape" => "Round",
-                    "measures" => (object)["Ray" => 4],
-                    "dough" => 140
-                ],
-                (object)[
-                    "shape" => "Rectangular",
-                    "measures" => (object)["Width" => 3, "Length" => 4],
-                    "dough" => 160
-                ],
-                (object)[
-                    "shape" => "Round",
-                    "measures" => (object)["Ray" => 7],
-                    "dough" => 200
-                ]
-            ]
-        ];
-        return $dough;
+        return $this->panFactory->getPansList();
+    }
+
+    /**
+     * @param PansList $pansList
+     * @return Dough
+     */
+    public function calculateDoughByPans(PansList $pansList): Dough
+    {
+        $totalDough = $pansList->sum('dough');
+        return $this->doughService->retrieveIngredientsFromTotal($totalDough);
+    }
+
+    /**
+     * @param $pans
+     * @return PansList
+     */
+    public function generatePansListByPans(array $pans): PansList
+    {
+        return $this->panFactory->generatePansList($pans);
     }
 }
