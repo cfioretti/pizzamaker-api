@@ -4,7 +4,7 @@ namespace App\Entities\Pan;
 
 interface PanInterface
 {
-    const PERCENTAGE_OF_DOUGH_TO_ADD = 15;
+    const PERCENTAGE_OF_DOUGH_TO_ADD = 10;
 
     public function calculateDoughWeight($measures);
 
