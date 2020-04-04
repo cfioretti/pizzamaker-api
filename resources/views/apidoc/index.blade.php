@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>I love pizza - API Reference</title>
+    <title>API Reference</title>
 
     <link rel="stylesheet" href="/docs/css/style.css" />
     <script src="/docs/js/all.js"></script>
@@ -39,7 +39,7 @@
               <div id="toc">
       </div>
                     <ul class="toc-footer">
-                                  <li></li>
+                                  <li><a href='http://github.com/mpociot/documentarian'>Documentation Powered by Documentarian</a></li>
                             </ul>
             </div>
     <div class="page-wrapper">
@@ -47,8 +47,8 @@
       <div class="content">
           <!-- START_INFO -->
 <h1>Info</h1>
-<p>Welcome to the generated API reference.<br>
-<a href='http://github.com/mpociot/documentarian'>Documentation Powered by Documentarian</a></p>
+<p>Welcome to the generated API reference.
+<a href="{{ route("apidoc.json") }}">Get Postman Collection</a></p>
 <!-- END_INFO -->
 <h1>API</h1>
 <!-- START_0a626b6d1291dcbdc606398e1a1eb067 -->
@@ -59,7 +59,7 @@
 <pre><code class="language-php">
 $client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'https://ilovepizza.test/api/pans',
+    'http://localhost/api/pans',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -70,11 +70,11 @@ $response = $client-&gt;get(
 $body = $response-&gt;getBody();
 print_r(json_decode((string) $body));</code></pre>
 <pre><code class="language-bash">curl -X GET \
-    -G "https://ilovepizza.test/api/pans" \
+    -G "http://localhost/api/pans" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"</code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "https://ilovepizza.test/api/pans"
+    "http://localhost/api/pans"
 );
 
 let headers = {
@@ -91,7 +91,7 @@ fetch(url, {
 <pre><code class="language-python">import requests
 import json
 
-url = 'https://ilovepizza.test/api/pans'
+url = 'http://localhost/api/pans'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -103,25 +103,22 @@ response.json()</code></pre>
 </blockquote>
 <pre><code class="language-json">[
     {
-        "id": 1,
-        "shape": "Round",
+        "shape": "round",
         "measures": [
-            "Ray"
+            "diameter"
         ]
     },
     {
-        "id": 2,
-        "shape": "Rectangular",
+        "shape": "square",
         "measures": [
-            "Width",
-            "Length"
+            "edge"
         ]
     },
     {
-        "id": 3,
-        "shape": "Square",
+        "shape": "rectangular",
         "measures": [
-            "Edge"
+            "width",
+            "length"
         ]
     }
 ]</code></pre>
@@ -136,7 +133,7 @@ response.json()</code></pre>
 <pre><code class="language-php">
 $client = new \GuzzleHttp\Client();
 $response = $client-&gt;post(
-    'https://ilovepizza.test/api/pans',
+    'http://localhost/api/pans',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -155,13 +152,13 @@ $response = $client-&gt;post(
 $body = $response-&gt;getBody();
 print_r(json_decode((string) $body));</code></pre>
 <pre><code class="language-bash">curl -X POST \
-    "https://ilovepizza.test/api/pans" \
+    "http://localhost/api/pans" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -d '{"pans":[{"shape":"Round","measure":"{ \"Ray\": 4 }"}]}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "https://ilovepizza.test/api/pans"
+    "http://localhost/api/pans"
 );
 
 let headers = {
@@ -188,7 +185,7 @@ fetch(url, {
 <pre><code class="language-python">import requests
 import json
 
-url = 'https://ilovepizza.test/api/pans'
+url = 'http://localhost/api/pans'
 payload = {
     "pans": [
         {
