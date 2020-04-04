@@ -90,6 +90,7 @@ return [
                  */
                 'domains' => [
                     'ilovepizza.*',
+                    '127.0.0.1.*',
                 ],
 
                 /*

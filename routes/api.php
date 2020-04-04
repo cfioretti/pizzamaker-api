@@ -23,7 +23,7 @@ Route::post('/pans', function (Request $request, PanController $panController) {
     return $panController->generateDough($request);
 });*/
 
-Route::group(['domain' => 'ilovepizza.test'], function () {
+Route::group(['domain' => '127.0.0.1'], function () {
     Route::get('/pans', 'PanController@pansList');
     Route::post('/pans', 'PanController@generateDough');
 });
