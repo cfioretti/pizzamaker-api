@@ -1,5 +1,5 @@
 ---
-title: I love pizza - API Reference
+title: API Reference
 
 language_tabs:
 - php
@@ -12,12 +12,14 @@ includes:
 search: true
 
 toc_footers:
-- 
+- <a href='http://github.com/mpociot/documentarian'>Documentation Powered by Documentarian</a>
 ---
 <!-- START_INFO -->
 # Info
-Welcome to the generated API reference.<br>
-<a href='http://github.com/mpociot/documentarian'>Documentation Powered by Documentarian</a>
+
+Welcome to the generated API reference.
+[Get Postman Collection](http://localhost/docs/collection.json)
+
 <!-- END_INFO -->
 
 #API
@@ -31,7 +33,7 @@ Welcome to the generated API reference.<br>
 
 $client = new \GuzzleHttp\Client();
 $response = $client->get(
-    'https://ilovepizza.test/api/pans',
+    'http://localhost/api/pans',
     [
         'headers' => [
             'Content-Type' => 'application/json',
@@ -45,14 +47,14 @@ print_r(json_decode((string) $body));
 
 ```bash
 curl -X GET \
-    -G "https://ilovepizza.test/api/pans" \
+    -G "http://localhost/api/pans" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json"
 ```
 
 ```javascript
 const url = new URL(
-    "https://ilovepizza.test/api/pans"
+    "http://localhost/api/pans"
 );
 
 let headers = {
@@ -72,7 +74,7 @@ fetch(url, {
 import requests
 import json
 
-url = 'https://ilovepizza.test/api/pans'
+url = 'http://localhost/api/pans'
 headers = {
   'Content-Type': 'application/json',
   'Accept': 'application/json'
@@ -87,25 +89,22 @@ response.json()
 ```json
 [
     {
-        "id": 1,
-        "shape": "Round",
+        "shape": "round",
         "measures": [
-            "Ray"
+            "diameter"
         ]
     },
     {
-        "id": 2,
-        "shape": "Rectangular",
+        "shape": "square",
         "measures": [
-            "Width",
-            "Length"
+            "edge"
         ]
     },
     {
-        "id": 3,
-        "shape": "Square",
+        "shape": "rectangular",
         "measures": [
-            "Edge"
+            "width",
+            "length"
         ]
     }
 ]
@@ -125,7 +124,7 @@ response.json()
 
 $client = new \GuzzleHttp\Client();
 $response = $client->post(
-    'https://ilovepizza.test/api/pans',
+    'http://localhost/api/pans',
     [
         'headers' => [
             'Content-Type' => 'application/json',
@@ -147,7 +146,7 @@ print_r(json_decode((string) $body));
 
 ```bash
 curl -X POST \
-    "https://ilovepizza.test/api/pans" \
+    "http://localhost/api/pans" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -d '{"pans":[{"shape":"Round","measure":"{ \"Ray\": 4 }"}]}'
@@ -156,7 +155,7 @@ curl -X POST \
 
 ```javascript
 const url = new URL(
-    "https://ilovepizza.test/api/pans"
+    "http://localhost/api/pans"
 );
 
 let headers = {
@@ -186,7 +185,7 @@ fetch(url, {
 import requests
 import json
 
-url = 'https://ilovepizza.test/api/pans'
+url = 'http://localhost/api/pans'
 payload = {
     "pans": [
         {
