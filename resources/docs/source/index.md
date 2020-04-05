@@ -134,7 +134,7 @@ $response = $client->post(
             'pans' => [
                 [
                     'shape' => 'Round',
-                    'measure' => '{ "Ray": 4 }',
+                    'measure' => '{ "diameter": 14 }',
                 ],
             ],
         ],
@@ -149,7 +149,7 @@ curl -X POST \
     "http://localhost/api/pans" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"pans":[{"shape":"Round","measure":"{ \"Ray\": 4 }"}]}'
+    -d '{"pans":[{"shape":"Round","measure":"{ \"diameter\": 14 }"}]}'
 
 ```
 
@@ -167,7 +167,7 @@ let body = {
     "pans": [
         {
             "shape": "Round",
-            "measure": "{ \"Ray\": 4 }"
+            "measure": "{ \"diameter\": 14 }"
         }
     ]
 }
@@ -190,7 +190,7 @@ payload = {
     "pans": [
         {
             "shape": "Round",
-            "measure": "{ \"Ray\": 4 }"
+            "measure": "{ \"diameter\": 14 }"
         }
     ]
 }

@@ -5,5 +5,7 @@
 /public/docs
 /storage/*.key
 /vendor
+/resources/docs/*
+/resources/views/apidoc/*
 .env
 .phpunit.result.cache

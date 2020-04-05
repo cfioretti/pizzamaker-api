@@ -143,7 +143,7 @@ $response = $client-&gt;post(
             'pans' =&gt; [
                 [
                     'shape' =&gt; 'Round',
-                    'measure' =&gt; '{ "Ray": 4 }',
+                    'measure' =&gt; '{ "diameter": 14 }',
                 ],
             ],
         ],
@@ -155,7 +155,7 @@ print_r(json_decode((string) $body));</code></pre>
     "http://localhost/api/pans" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"pans":[{"shape":"Round","measure":"{ \"Ray\": 4 }"}]}'
+    -d '{"pans":[{"shape":"Round","measure":"{ \"diameter\": 14 }"}]}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/pans"
@@ -170,7 +170,7 @@ let body = {
     "pans": [
         {
             "shape": "Round",
-            "measure": "{ \"Ray\": 4 }"
+            "measure": "{ \"diameter\": 14 }"
         }
     ]
 }
@@ -190,7 +190,7 @@ payload = {
     "pans": [
         {
             "shape": "Round",
-            "measure": "{ \"Ray\": 4 }"
+            "measure": "{ \"diameter\": 14 }"
         }
     ]
 }
