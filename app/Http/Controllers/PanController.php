@@ -39,7 +39,7 @@ class PanController extends Controller
      * @throws ValidationException
      *
      * @bodyParam pans.*.shape string required The shape of a pan. Example: Round
-     * @bodyParam pans.*.measure object required The measure of a pan. Example: { "Ray": 4 }
+     * @bodyParam pans.*.measure object required The measure of a pan. Example: { "diameter": 14 }
      */
     public function generateDough(Request $request): JsonResponse
     {
