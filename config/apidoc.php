@@ -89,7 +89,7 @@ return [
                  * Match only routes whose domains match this pattern (use * as a wildcard to match any characters).
                  */
                 'domains' => [
-                    'ilovepizza.*',
+                    'pizzamaker-api',
                     '127.0.0.1',
                     'localhost',
                 ],
