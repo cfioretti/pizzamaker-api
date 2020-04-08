@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Entities\Pan;
+namespace Modules\Pizza\Entities\Pan;
 
-class RectangularPan extends Pan
+class SquarePan extends Pan
 {
     /**
      * @param $measures
@@ -10,9 +10,8 @@ class RectangularPan extends Pan
      */
     public function calculateDoughWeight($measures)
     {
-        $width = (int)$measures['width'];
-        $length = (int)$measures['length'];
-        $weight = intval($width * $length / 2);
+        $edge = (int)$measures['edge'];
+        $weight = intval(pow($edge, 2) / 2);
 
         return $this->addPercentageToWeight($weight);
     }
@@ -21,8 +20,8 @@ class RectangularPan extends Pan
     public static function acceptedMeasures()
     {
         return [
-            "shape" => "rectangular",
-            "measures" => ["width", "length"]
+            "shape" => "square",
+            "measures" => ["edge"]
         ];
     }
 }

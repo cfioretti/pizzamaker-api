@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Services;
+namespace Modules\Pizza\Http\Services;
 
-use App\Entities\Dough\Dough;
-use App\Entities\Pan\PanFactory;
-use App\Entities\Pan\PansList;
+use Modules\Pizza\Entities\Dough\Dough;
+use Modules\Pizza\Entities\Pan\PanFactory;
+use Modules\Pizza\Entities\Pan\PansList;
 
 class PanService
 {

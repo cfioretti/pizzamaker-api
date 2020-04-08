@@ -2,8 +2,8 @@
 
 namespace Tests\Unit\Controllers;
 
-use App\Http\Controllers\PanController;
-use App\Http\Services\PanService;
+use Modules\Pizza\Http\Controllers\PanController;
+use Modules\Pizza\Http\Services\PanService;
 use Illuminate\Validation\ValidationException;
 use Tests\TestCase;
 use Illuminate\Http\Response;

@@ -1,15 +1,19 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace Modules\Pizza\Http\Controllers;
 
-use App\Http\Services\PanService;
+use Modules\Pizza\Http\Services\PanService;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Routing\Controller;
 
 class PanController extends Controller
 {
+    use ValidatesRequests;
+
     /** @var PanService */
     private $panService;
 

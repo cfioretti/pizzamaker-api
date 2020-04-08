@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entities\Dough;
+namespace Modules\Pizza\Entities\Dough;
 
 use stdClass;
 

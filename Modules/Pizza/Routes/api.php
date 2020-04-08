@@ -13,6 +13,9 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/pizza', function (Request $request) {
+/*Route::middleware('auth:api')->get('/pizza', function (Request $request) {
     return $request->user();
-});
+});*/
+
+Route::get('/pans', 'PanController@pansList');
+Route::post('/pans', 'PanController@generateDough');

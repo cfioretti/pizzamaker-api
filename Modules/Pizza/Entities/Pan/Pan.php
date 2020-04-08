@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Entities\Pan;
+namespace Modules\Pizza\Entities\Pan;
 
-use App\Entities\Entity;
+use Modules\Pizza\Entities\Entity;
 use stdClass;
 
 class Pan extends Entity implements PanInterface

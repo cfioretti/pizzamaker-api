@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Entities\Pan;
+namespace Modules\Pizza\Entities\Pan;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Collection;

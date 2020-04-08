@@ -2,11 +2,11 @@
 
 namespace Tests\Unit\Services;
 
-use App\Entities\Dough\Dough;
-use App\Entities\Pan\PanFactory;
-use App\Entities\Pan\PansList;
-use App\Http\Services\DoughService;
-use App\Http\Services\PanService;
+use Modules\Pizza\Entities\Dough\Dough;
+use Modules\Pizza\Entities\Pan\PanFactory;
+use Modules\Pizza\Entities\Pan\PansList;
+use Modules\Pizza\Http\Services\DoughService;
+use Modules\Pizza\Http\Services\PanService;
 use Tests\TestCase;
 
 class PanServiceTest extends TestCase
@@ -48,6 +48,6 @@ class PanServiceTest extends TestCase
 
         $dough = $this->panService->calculateDoughByPans($this->panList);
 
-        $this->assertInstanceOf("App\Entities\Dough\Dough", $dough);
+        $this->assertInstanceOf("Modules\Pizza\Entities\Dough\Dough", $dough);
     }
 }

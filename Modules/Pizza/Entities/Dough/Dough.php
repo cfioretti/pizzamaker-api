@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Entities\Dough;
+namespace Modules\Pizza\Entities\Dough;
 
-use App\Entities\Entity;
+use Modules\Pizza\Entities\Entity;
 use stdClass;
 
 class Dough extends Entity

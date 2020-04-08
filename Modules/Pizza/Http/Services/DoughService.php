@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Services;
+namespace Modules\Pizza\Http\Services;
 
-use App\Entities\Dough\Dough;
-use App\Entities\Dough\DoughFactory;
+use Modules\Pizza\Entities\Dough\Dough;
+use Modules\Pizza\Entities\Dough\DoughFactory;
 
 class DoughService
 {

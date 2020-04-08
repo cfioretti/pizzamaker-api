@@ -22,6 +22,3 @@ use App\Http\Controllers\PanController;
 Route::post('/pans', function (Request $request, PanController $panController) {
     return $panController->generateDough($request);
 });*/
-
-Route::get('/pans', 'PanController@pansList');
-Route::post('/pans', 'PanController@generateDough');
