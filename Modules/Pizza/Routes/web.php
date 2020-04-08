@@ -11,6 +11,6 @@
 |
 */
 
-Route::prefix('pizza')->group(function() {
+/*Route::prefix('pizza')->group(function() {
     Route::get('/', 'PizzaController@index');
-});
+});*/
