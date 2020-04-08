@@ -89,17 +89,14 @@ return [
                  * Match only routes whose domains match this pattern (use * as a wildcard to match any characters).
                  */
                 'domains' => [
-                    'ilovepizza.*',
-                    '127.0.0.1',
-                    'localhost',
+                    '*'
                 ],
 
                 /*
                  * Match only routes whose paths match this pattern (use * as a wildcard to match any characters).
                  */
                 'prefixes' => [
-                    '*',
-                    // 'users/*',
+                    'api/*',
                 ],
 
                 /*
@@ -117,7 +114,7 @@ return [
              * Note that the route must be referenced by name here (wildcards are supported).
              */
             'include' => [
-                // 'users.index', 'healthcheck*'
+                'api/*'
             ],
 
             /*
