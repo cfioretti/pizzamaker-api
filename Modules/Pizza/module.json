@@ -1,0 +1,13 @@
+{
+    "name": "Pizza",
+    "alias": "pizza",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\Pizza\\Providers\\PizzaServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
