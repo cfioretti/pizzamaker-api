@@ -15,6 +15,8 @@ class PanFactory
                 return new RoundPan();
             case 'rectangular':
                 return new RectangularPan();
+            case 'square':
+                return new SquarePan();
             default :
                 return new NotFoundPan();
         }
@@ -41,7 +43,7 @@ class PanFactory
         foreach ($pans as $pan) {
             $obj = new \stdClass();
             $obj->shape = $pan['shape'];
-            $obj->measures = $pan['measure'];
+            $obj->measures = $pan['measures'];
 
             $panShape = $this->getPanByShape($obj->shape);
             $obj->doughWeight = $panShape->calculateDoughWeight($obj->measures);
