@@ -18,9 +18,9 @@ class DoughFactory
         $doughObj->total = $totalDough;
         $doughObj->flour = round($part * 1000, 0, PHP_ROUND_HALF_EVEN);
         $doughObj->water = round($part * 750, 0, PHP_ROUND_HALF_EVEN);
-        $doughObj->salt = round($part * 22, 0, PHP_ROUND_HALF_UP);
-        $doughObj->evoOil = round($part * 18, 0, PHP_ROUND_HALF_UP);
-        $doughObj->yeast = round($part * 10, 0, PHP_ROUND_HALF_UP);
+        $doughObj->salt = round($part * 23, 0, PHP_ROUND_HALF_EVEN);
+        $doughObj->evoOil = round($part * 20, 0, PHP_ROUND_HALF_UP);
+        $doughObj->yeast = round($part * 7, 1, PHP_ROUND_HALF_UP);
 
         return Dough::importFromObject($doughObj);
     }
