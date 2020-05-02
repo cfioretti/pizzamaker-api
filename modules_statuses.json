@@ -1,4 +1,5 @@
 {
     "Pizza": true,
-    "Auth": true
+    "Auth": true,
+    "Recipe": true
 }
