@@ -11,6 +11,6 @@
 |
 */
 
-Route::prefix('recipe')->group(function() {
+/*Route::prefix('recipe')->group(function() {
     Route::get('/', 'RecipeController@index');
-});
+});*/

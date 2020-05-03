@@ -13,6 +13,4 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/recipe', function (Request $request) {
-    return $request->user();
-});
+Route::resource('recipes', 'RecipeController');

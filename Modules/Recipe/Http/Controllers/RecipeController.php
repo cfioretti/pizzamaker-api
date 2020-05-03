@@ -4,17 +4,35 @@ namespace Modules\Recipe\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
 
 class RecipeController extends Controller
 {
     /**
      * Display a listing of the resource.
-     * @return Response
+     * @return JsonResponse
      */
     public function index()
     {
-        return view('recipe::index');
+        $recipes = [
+            [
+                "id" => 1,
+                "name" => "Pizza Romana",
+                "author" => "Pizzamaker",
+                "image" => "img/pizza_romana.png"
+            ],
+            [
+                "id" => 2,
+                "name" => "Pizza Napoletana",
+                "author" => "Pizzamaker",
+                "image" => "img/pizza_napoletana.png"
+            ],
+        ];
+        return response()->json(
+            $recipes,
+            Response::HTTP_OK
+        );
     }
 
     /**
