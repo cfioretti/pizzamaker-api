@@ -4,13 +4,13 @@ namespace Modules\Recipe\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Recipe extends Model
+class Ingredients extends Model
 {
     /**
      * The database table used by the model.
      * @var string
      */
-    protected $table = 'recipes';
+    protected $table = 'ingredients';
 
     /**
      * The database primary key value.
@@ -23,6 +23,6 @@ class Recipe extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'description', 'image'
+        'total', 'flour', 'water', 'salt', 'oil', 'yeast'
     ];
 }

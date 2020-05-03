@@ -7,33 +7,42 @@ use Illuminate\Http\Response;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
 use Modules\Recipe\Entities\Recipe;
+use Modules\Recipe\Http\Services\RecipeService;
 
 class RecipeController extends Controller
 {
+    /** @var RecipeService */
+    private $recipeService;
+
+    public function __construct(
+        RecipeService $recipeService
+    )
+    {
+        $this->recipeService = $recipeService;
+    }
+
     /**
      * Display a listing of the resource.
      * @return JsonResponse
      */
     public function index()
     {
-        $recipes = [
-            [
-                "id" => 1,
-                "name" => "Pizza Romana",
-                "author" => "Pizzamaker",
-                "image" => "img/pizza_romana.png"
-            ],
-            [
-                "id" => 2,
-                "name" => "Pizza Napoletana",
-                "author" => "Pizzamaker",
-                "image" => "img/pizza_napoletana.png"
-            ],
-        ];
+        $recipes = $this->recipeService->getRecipes();
+
         return response()->json(
-            $recipes,
+            $recipes->toArray(),
             Response::HTTP_OK
         );
+    }
+
+    /**
+     * Show the specified resource.
+     * @param int $id
+     * @return Recipe
+     */
+    public function show($id)
+    {
+        return $this->recipeService->getRecipe($id);
     }
 
     /**
@@ -44,16 +53,6 @@ class RecipeController extends Controller
     public function store(Request $request)
     {
         //
-    }
-
-    /**
-     * Show the specified resource.
-     * @param int $id
-     * @return Response
-     */
-    public function show($id)
-    {
-        return Recipe::findOrFail($id);
     }
 
     /**
