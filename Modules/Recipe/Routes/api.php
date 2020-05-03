@@ -13,4 +13,6 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::apiResource('recipes', 'RecipeController');
+Route::apiResource('recipes', 'RecipeController')->only([
+    'index', 'show'
+]);;
