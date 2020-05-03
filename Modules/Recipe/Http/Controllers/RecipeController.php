@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
+use Modules\Recipe\Entities\Recipe;
 
 class RecipeController extends Controller
 {
@@ -36,15 +37,6 @@ class RecipeController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     * @return Response
-     */
-    public function create()
-    {
-        return view('recipe::create');
-    }
-
-    /**
      * Store a newly created resource in storage.
      * @param Request $request
      * @return Response
@@ -61,17 +53,7 @@ class RecipeController extends Controller
      */
     public function show($id)
     {
-        return view('recipe::show');
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     * @param int $id
-     * @return Response
-     */
-    public function edit($id)
-    {
-        return view('recipe::edit');
+        return Recipe::findOrFail($id);
     }
 
     /**

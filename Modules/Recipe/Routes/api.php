@@ -13,4 +13,4 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::resource('recipes', 'RecipeController');
+Route::apiResource('recipes', 'RecipeController');
