@@ -20,9 +20,9 @@ class RecipeDatabaseSeeder extends Seeder
             'total' => 1800,
             'flour' => 1000,
             'water' => 750,
-            'salt' => 750,
-            'oil' => 750,
-            'yeast' => 750,
+            'salt' => 23,
+            'oil' => 20,
+            'yeast' => 7,
             'others' => ''
         ]);
 
