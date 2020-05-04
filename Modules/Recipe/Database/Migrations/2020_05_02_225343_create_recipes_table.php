@@ -20,27 +20,18 @@ class CreateRecipesTable extends Migration
             $table->integer('salt');
             $table->integer('oil')->default(0);
             $table->float('yeast');
+            $table->string('others');
         });
 
         Schema::create('recipes', function (Blueprint $table) {
             $table->bigIncrements('id');
 
             $table->string('name');
-            $table->string('description')->nullable();
+            $table->longText('description')->nullable();
             $table->string('image')->nullable();
             $table->foreignId('user_id')->constrained('users');
             $table->foreignId('ingredient_id')->constrained('ingredients');
-            $table->timestamps();
-
-            /*$table->unsignedBigInteger('user_id')->unsigned();
-            $table->foreign('user_id')
-                ->references('id')
-                ->on('users');
-
-            $table->unsignedBigInteger('ingredient_id')->unsigned();
-            $table->foreign('ingredient_id')
-                ->references('id')
-                ->on('ingredients');*/
+            $table->timestamp('created_at')->useCurrent();
         });
     }
 

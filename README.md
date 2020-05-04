@@ -22,8 +22,14 @@ From project folder:
 cp .env.example .env
 php artisan key:generate
 php artisan apidoc:generate
+php artisan migrate
+php artisan module:seed
+```
+To run in local environment:
+```sh
 php artisan serve
 ```
+
 
 ## License
 
