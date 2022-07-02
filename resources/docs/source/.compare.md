@@ -134,7 +134,7 @@ $response = $client->post(
             'pans' => [
                 [
                     'shape' => 'Round',
-                    'measure' => '{ "diameter": 14 }',
+                    'measures' => '{ "diameter": 14 }',
                 ],
             ],
         ],
@@ -149,7 +149,7 @@ curl -X POST \
     "http://localhost/api/pans" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"pans":[{"shape":"Round","measure":"{ \"diameter\": 14 }"}]}'
+    -d '{"pans":[{"shape":"Round","measures":"{ \"diameter\": 14 }"}]}'
 
 ```
 
@@ -167,7 +167,7 @@ let body = {
     "pans": [
         {
             "shape": "Round",
-            "measure": "{ \"diameter\": 14 }"
+            "measures": "{ \"diameter\": 14 }"
         }
     ]
 }
@@ -190,7 +190,7 @@ payload = {
     "pans": [
         {
             "shape": "Round",
-            "measure": "{ \"diameter\": 14 }"
+            "measures": "{ \"diameter\": 14 }"
         }
     ]
 }
@@ -211,7 +211,7 @@ response.json()
 Parameter | Type | Status | Description
 --------- | ------- | ------- | ------- | -----------
     `pans.*.shape` | string |  required  | The shape of a pan.
-        `pans.*.measure` | object |  required  | The measure of a pan.
+        `pans.*.measures` | object |  required  | The measure of a pan.
     
 <!-- END_023d434def3b985bfed57a8907b52e9b -->
 

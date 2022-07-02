@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>API Reference</title>
 
-    <link rel="stylesheet" href="/docs/css/style.css" />
-    <script src="/docs/js/all.js"></script>
+    <link rel="stylesheet" href="{{ asset('/docs/css/style.css') }}" />
+    <script src="{{ asset('/docs/js/all.js') }}"></script>
 
 
           <script>
@@ -143,7 +143,7 @@ $response = $client-&gt;post(
             'pans' =&gt; [
                 [
                     'shape' =&gt; 'Round',
-                    'measure' =&gt; '{ "diameter": 14 }',
+                    'measures' =&gt; '{ "diameter": 14 }',
                 ],
             ],
         ],
@@ -155,7 +155,7 @@ print_r(json_decode((string) $body));</code></pre>
     "http://localhost/api/pans" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"pans":[{"shape":"Round","measure":"{ \"diameter\": 14 }"}]}'
+    -d '{"pans":[{"shape":"Round","measures":"{ \"diameter\": 14 }"}]}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "http://localhost/api/pans"
@@ -170,7 +170,7 @@ let body = {
     "pans": [
         {
             "shape": "Round",
-            "measure": "{ \"diameter\": 14 }"
+            "measures": "{ \"diameter\": 14 }"
         }
     ]
 }
@@ -190,7 +190,7 @@ payload = {
     "pans": [
         {
             "shape": "Round",
-            "measure": "{ \"diameter\": 14 }"
+            "measures": "{ \"diameter\": 14 }"
         }
     ]
 }
@@ -220,7 +220,7 @@ response.json()</code></pre>
 <td>The shape of a pan.</td>
 </tr>
 <tr>
-<td><code>pans.*.measure</code></td>
+<td><code>pans.*.measures</code></td>
 <td>object</td>
 <td>required</td>
 <td>The measure of a pan.</td>
