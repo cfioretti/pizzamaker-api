@@ -1,0 +1,18 @@
+services:
+  php:
+    build: .
+    container_name: pizzamaker-api
+    depends_on:
+    - mariadb
+    ports:
+      - "8080:80"
+    volumes:
+    - .:/srv
+
+  mariadb:
+    image: mariadb:10.7
+    environment:
+    - MYSQL_ROOT_PASSWORD=root
+    - MYSQL_DATABASE=pizzamaker
+    - MYSQL_USER=pizzamaker
+    - MYSQL_PASSWORD=password
